@@ -1,3 +1,7 @@
+# Forked Version
+This is a forked version of [pyfolio](https://github.com/quantopian/pyfolio). I've created this repo because it appears that the original one is not maintained anymore. I've applied some of the open PRs here and fixed some issues.
+
+
 ![pyfolio](https://media.quantopian.com/logos/open_source/pyfolio-logo-03.png "pyfolio")
 
 # pyfolio
