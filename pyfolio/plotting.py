@@ -791,7 +791,7 @@ def plot_rolling_returns(returns,
 
     if factor_returns is not None:
         cum_factor_returns = ep.cum_returns(
-            factor_returns[cum_rets.index], 1.0)
+            factor_returns.reindex(index=cum_rets.index), 1.0)
         cum_factor_returns.plot(lw=2, color='gray',
                                 label=factor_returns.name, alpha=0.60,
                                 ax=ax, **kwargs)
@@ -1769,7 +1769,7 @@ def plot_round_trip_lifetimes(round_trips, disp_amount=16, lsize=18, ax=None):
                     [y_ix, y_ix], color=c,
                     linewidth=lsize, solid_capstyle='butt')
 
-    ax.set_yticks(range(disp_amount))
+    ax.set_yticks(range(len(sample)))
     ax.set_yticklabels([utils.format_asset(s) for s in sample])
 
     ax.set_ylim((-0.5, min(len(sample), disp_amount) - 0.5))
